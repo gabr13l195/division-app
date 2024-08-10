@@ -1,12 +1,19 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigator/StackNavigator';  // Asegúrate de que la ruta es correcta
 
-export const Screen1 = () => {
+type Props = StackScreenProps<RootStackParamList, 'Screen1'>;
+
+export const Screen1 = ({ navigation }: Props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bienvenido</Text>
             <Image source={require('../images/matematicas.png')} style={styles.image} />
-            <TouchableOpacity style={styles.button} onPress={() => console.log('Acceder')}>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('Screen2')}
+            >
                 <Text style={styles.buttonText}>Acceder</Text>
             </TouchableOpacity>
         </View>
@@ -26,8 +33,8 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     image: {
-        width: 300, // Ajusta según las dimensiones de tu imagen
-        height: 200, // Ajusta según las dimensiones de tu imagen
+        width: 300,
+        height: 200,
         resizeMode: 'contain',
         marginBottom: 20
     },
