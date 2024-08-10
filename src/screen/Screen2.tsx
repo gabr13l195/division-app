@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { styles } from '../themes/appTheme'; // Asegúrate de que la ruta es correcta
 
 export const Screen2 = () => {
     const [num1, setNum1] = useState('');
@@ -44,35 +45,4 @@ export const Screen2 = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 20,
-    },
-    input: {
-        width: '80%',
-        padding: 10,
-        marginVertical: 10,
-        borderWidth: 1,
-        borderColor: 'gray',
-        borderRadius: 5,
-    },
-    button: {
-        backgroundColor: 'blue',
-        padding: 10,
-        borderRadius: 5,
-        marginVertical: 10,
-    },
-    buttonText: {
-        color: 'white',
-        textAlign: 'center',
-        fontSize: 16,
-    },
-    resultText: {
-        fontSize: 18,
-        marginVertical: 10,
-    },
-});
 
