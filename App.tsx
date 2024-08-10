@@ -1,13 +1,13 @@
 import React from 'react'
-import { Text, View } from 'react-native'
-import { Pantalla1Screen } from './src/screens/Pantalla1Screen';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { StackNavigator } from './src/navigator/StackNavigator';
 
 const App = () => {
   return (
-    <View>
-      <Pantalla1Screen/>
-    </View>
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
   )
 }
-
 export default App;

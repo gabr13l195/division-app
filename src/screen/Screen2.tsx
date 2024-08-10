@@ -1,12 +1,11 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-export const Pantalla1Screen = () => {
+export const Screen2 = () => {
     return (
         <View>
-            <Text>
-                Hola
-            </Text>
+            <Text>Screen2</Text>
         </View>
     )
 }
+
